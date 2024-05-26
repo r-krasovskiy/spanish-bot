@@ -12,7 +12,7 @@ This is a Telegram bot which helps to learn Spanish words.
 5) get Telegram tocken follwed by the standard process (a message in Telegram to <b><i>@BotFather</i></b> and dialogue with it);
 6) create a file <b>.env</b> and put there the received Telegram tocken (in string format - 'XXX...XXX'), name this variable as <b><i>TELEGRAM_TOKEN</i></b>;
 7) launch bot by the command <b><i>python spanish_bot.py</i></b>;
-8) find yur bot by name received within registration on the step 5 above;
+8) find your bot by name received within registration on the step 5 above;
 9) start chatting with the bot and learn Spanish words.
 
 ## Steps for further development
