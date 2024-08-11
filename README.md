@@ -1,12 +1,60 @@
-This is a Telegram bot which helps to learn Spanish words.
+# Телеграм-бот для изучения испанского языка
+Проект представляет собой телеграм-бота, который помогает пользователям упражняться в переводе испанских и русских слов.
+Бот предоставляет два режима перевода и ведет учет правильных и неправильных ответов.
 
-The logic:
-1) the bot provides a word in Spanish which a user has to translate, sending a response message;
-2) if the user's response is correct he/she receives a message with congrtulation and a new word, otherwice he/she receives a message with a correct answer.
+## Функциональность
 
-Steps for further development:
-a) to add database with Esp-Rus words;
-b) to add option of reversal translation (Rus-Esp);
-c) to split words by random butches of 10 items, the user has to gain 10 points translating these words; the words which were not translated will be provided 
-to the user again;
-d) to add levels of difficulty.
+**Режимы работы:**
+   - `ESP_RUS`: перевод испанских слов на русский,
+   - `RUS_ESP`: перевод русских слов на испанский.
+
+**Возможности:**
+   - случайный выбор слова из базы данных,
+   - ведение истории ответов и ошибок,
+   - оповещения о правильности ответов,
+   - поддержка команд для перезапуска сессии.
+
+## Установка и запуск
+
+**Требования**
+
+Для работы бота понадобятся следующие библиотеки Python:
+- python-telegram-bot,
+- python-dotenv,
+- sqlite3 (встроенный в Python).
+
+Установка библиотек оуществляется помощью команды терминала `pip install`, например:
+```
+pip install python-telegram-bot
+```
+
+
+**Настройка**
+
+**1. Подключите бота Телеграм по токену.**
+Создайте файл `.env` в корневом каталоге проекта и добавьте туда ваш токен для бота Telegram:
+```
+TELEGRAM_TOKEN=your_telegram_bot_token_here
+```
+
+**2. Подготовьте базу данных.**
+Убедитесь, что в корневом каталоге проекта есть файл базы данных `words.db`, содержащий таблицу words со следующими полями:
+- spanish (испанское слово),
+- russian (русское слово).
+
+Для создания и управления базой данных используйте следующие файлы:
+ - `db_management.py`: модуль для управления базой данных испанских и русских слов.
+ - `db_add_words.py`: скрипт для добавления слов в базу данных.
+
+**3. Запустите бота.**
+В терминале ипользуйте команду:
+```
+python spanish_bot.py
+```
+
+## Логирование
+
+Логирование настроено для записи информации о работе бота и возможных ошибках. Логи будут записываться в стандартный вывод с информацией о времени, уровне важности и сообщении.
+
+## Автор
+Роман Красовский
